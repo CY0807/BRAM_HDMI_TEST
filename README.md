@@ -1,0 +1,2 @@
+# BRAM_HDMI_TEST
+将数据从FPGA的BRAM输出到HDMI接口的测试例程
