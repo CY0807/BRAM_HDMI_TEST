@@ -1,0 +1,85 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jan 12 10:07:16 2023
+| Host         : LAPTOP-8KA88UT5 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_hdmi_test_control_sets_placed.rpt
+| Design       : top_hdmi_test
+| Device       : xc7a35t
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     7 |
+|    Minimum number of control sets                        |     7 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    26 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     7 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              99 |           63 |
+| No           | No                    | Yes                    |              19 |            9 |
+| No           | Yes                   | No                     |              42 |           17 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              54 |           18 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------+-----------------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+|          Clock Signal          |              Enable Signal              |                                Set/Reset Signal                               | Slice Load Count | Bel Load Count |
++--------------------------------+-----------------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+|  clk_wiz_0_inst/inst/video_clk |                                         | hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1_n_0 |                5 |             10 |
+|  clk_wiz_0_inst/inst/video_clk | hdmi_top_inst/datain_2_rgb_inst/v_cnt_1 | hdmi_top_inst/datain_2_rgb_inst/AR[0]                                         |                5 |             12 |
+|  clk_wiz_0_inst/inst/video_clk | img_data_generator_inst/p_0_in_0        | img_data_generator_inst/h_ratio[2]_i_3_n_0                                    |                4 |             14 |
+|  clk_wiz_0_inst/inst/video_clk |                                         | hdmi_top_inst/datain_2_rgb_inst/AR[0]                                         |                9 |             19 |
+|  clk_wiz_0_inst/inst/video_clk | hdmi_top_inst/datain_2_rgb_inst/E[0]    | img_data_generator_inst/h_ratio[2]_i_3_n_0                                    |                9 |             28 |
+|  clk_wiz_0_inst/inst/video_clk |                                         | hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/SR[0]                  |               12 |             32 |
+|  clk_wiz_0_inst/inst/video_clk |                                         |                                                                               |               63 |             99 |
++--------------------------------+-----------------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+
+

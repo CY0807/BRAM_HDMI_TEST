@@ -1,0 +1,556 @@
+
+*** Running vivado
+    with args -log top_hdmi_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_hdmi_test.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source top_hdmi_test.tcl -notrace
+Command: synth_design -top top_hdmi_test -part xc7a35tfgg484-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2L
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 31828 
+WARNING: [Synth 8-2611] redeclaration of ansi port data_req is not allowed [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/datain_2_rgb.v:144]
+WARNING: [Synth 8-2611] redeclaration of ansi port video_clk is not allowed [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/hdmi_top.v:37]
+WARNING: [Synth 8-2611] redeclaration of ansi port video_clk_5x is not allowed [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/hdmi_top.v:38]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 811.672 ; gain = 185.270
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_hdmi_test' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/new/top_hdmi_test.v:23]
+INFO: [Synth 8-6157] synthesizing module 'img_data_generator' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/new/img_data_generator.v:23]
+	Parameter H_ACTIVE bound to: 16'b0000000110000000 
+	Parameter V_ACTIVE bound to: 16'b0000000011011000 
+INFO: [Synth 8-6157] synthesizing module 'bram_hdmi_data' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.runs/synth_1/.Xil/Vivado-9936-LAPTOP-8KA88UT5/realtime/bram_hdmi_data_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bram_hdmi_data' (1#1) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.runs/synth_1/.Xil/Vivado-9936-LAPTOP-8KA88UT5/realtime/bram_hdmi_data_stub.v:6]
+WARNING: [Synth 8-7023] instance 'bram_hdmi_data_inst' of module 'bram_hdmi_data' has 6 connections declared, but only 5 given [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/new/img_data_generator.v:97]
+WARNING: [Synth 8-6014] Unused sequential element v_ratio_reg was removed.  [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/new/img_data_generator.v:81]
+INFO: [Synth 8-6155] done synthesizing module 'img_data_generator' (2#1) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/new/img_data_generator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_top' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/hdmi_top.v:22]
+INFO: [Synth 8-6157] synthesizing module 'datain_2_rgb' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/datain_2_rgb.v:23]
+	Parameter H_ACTIVE bound to: 16'b0000011110000000 
+	Parameter H_FP bound to: 16'b0000000001011000 
+	Parameter H_SYNC bound to: 16'b0000000000101100 
+	Parameter H_BP bound to: 16'b0000000010010100 
+	Parameter V_ACTIVE bound to: 16'b0000010000111000 
+	Parameter V_FP bound to: 16'b0000000000000100 
+	Parameter V_SYNC bound to: 16'b0000000000000101 
+	Parameter V_BP bound to: 16'b0000000000100100 
+	Parameter HS_POL bound to: 1'b1 
+	Parameter VS_POL bound to: 1'b1 
+	Parameter H_TOTAL bound to: 16'b0000100010011000 
+	Parameter V_TOTAL bound to: 16'b0000010001100101 
+WARNING: [Synth 8-6014] Unused sequential element active_x_reg was removed.  [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/datain_2_rgb.v:184]
+INFO: [Synth 8-6155] done synthesizing module 'datain_2_rgb' (3#1) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/datain_2_rgb.v:23]
+WARNING: [Synth 8-6104] Input port 'data_req' has an internal driver [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/hdmi_top.v:61]
+INFO: [Synth 8-638] synthesizing module 'rgb2dvi' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/rgb2dvi.vhd:89]
+	Parameter kGenerateSerialClk bound to: 0 - type: bool 
+	Parameter kClkPrimitive bound to: MMCM - type: string 
+	Parameter kClkRange bound to: 1 - type: integer 
+	Parameter kRstActiveHigh bound to: 1 - type: bool 
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/SyncAsyncReset.vhd:72]
+	Parameter kPolarity bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/SyncAsyncReset.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b1 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/SyncAsync.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (4#1) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (5#1) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'OutputSERDES' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/OutputSERDES.vhd:76]
+	Parameter kParallelWidth bound to: 10 - type: integer 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'OutputBuffer' to cell 'OBUFDS' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/OutputSERDES.vhd:83]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerMaster' to cell 'OSERDESE2' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/OutputSERDES.vhd:92]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerSlave' to cell 'OSERDESE2' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/OutputSERDES.vhd:135]
+INFO: [Synth 8-256] done synthesizing module 'OutputSERDES' (6#1) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/OutputSERDES.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Encoder' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Encoder' (7#1) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'rgb2dvi' (8#1) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/rgb2dvi.vhd:89]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_top' (9#1) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/hdmi_top.v:22]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.runs/synth_1/.Xil/Vivado-9936-LAPTOP-8KA88UT5/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (10#1) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.runs/synth_1/.Xil/Vivado-9936-LAPTOP-8KA88UT5/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-3848] Net data_req in module/entity top_hdmi_test does not have driver. [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/new/top_hdmi_test.v:35]
+WARNING: [Synth 8-3848] Net reset in module/entity top_hdmi_test does not have driver. [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/new/top_hdmi_test.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'top_hdmi_test' (11#1) [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/new/top_hdmi_test.v:23]
+WARNING: [Synth 8-3331] design TMDS_Encoder has unconnected port SerialClk
+WARNING: [Synth 8-3331] design TMDS_Encoder has unconnected port aRst
+WARNING: [Synth 8-3331] design rgb2dvi has unconnected port aRst_n
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 852.270 ; gain = 225.867
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 852.270 ; gain = 225.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 852.270 ; gain = 225.867
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_inst'
+Finished Parsing XDC File [e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_inst'
+Parsing XDC File [e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/bram_hdmi_data/bram_hdmi_data/bram_hdmi_data_in_context.xdc] for cell 'img_data_generator_inst/bram_hdmi_data_inst'
+Finished Parsing XDC File [e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/bram_hdmi_data/bram_hdmi_data/bram_hdmi_data_in_context.xdc] for cell 'img_data_generator_inst/bram_hdmi_data_inst'
+Parsing XDC File [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/constrs_1/imports/new/top.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sys_clk' already exists, overwriting the previous clock with the same name. [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/constrs_1/imports/new/top.xdc:10]
+Finished Parsing XDC File [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/constrs_1/imports/new/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/constrs_1/imports/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_hdmi_test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_hdmi_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 993.344 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 993.344 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'img_data_generator_inst/bram_hdmi_data_inst' at clock pin 'clka' is different from the actual clock period '6.737', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 995.523 ; gain = 369.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 995.523 ; gain = 369.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property DONT_TOUCH = true for clk_wiz_0_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for img_data_generator_inst/bram_hdmi_data_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 995.523 ; gain = 369.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 995.523 ; gain = 369.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 2     
+	   3 Input      5 Bit       Adders := 9     
+	   4 Input      5 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 3     
+	   8 Input      4 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               12 Bit    Registers := 2     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 25    
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 2     
+	   4 Input     10 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 9     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module img_data_generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module datain_2_rgb 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module SyncAsync 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module TMDS_Encoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      5 Bit       Adders := 3     
+	   4 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC1_1_reg' into 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_1_reg' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:115]
+INFO: [Synth 8-4471] merging register 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC1_2_reg' into 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_2_reg' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:149]
+INFO: [Synth 8-4471] merging register 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pVde_1_reg' into 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/pVde_1_reg' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:110]
+INFO: [Synth 8-4471] merging register 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pVde_2_reg' into 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/pVde_2_reg' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:150]
+INFO: [Synth 8-4471] merging register 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/pC0_1_reg' into 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_1_reg' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:114]
+INFO: [Synth 8-4471] merging register 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/pC0_2_reg' into 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_2_reg' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:148]
+INFO: [Synth 8-4471] merging register 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/pC1_1_reg' into 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_1_reg' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:115]
+INFO: [Synth 8-4471] merging register 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/pC1_2_reg' into 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_2_reg' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:149]
+INFO: [Synth 8-4471] merging register 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/pVde_1_reg' into 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/pVde_1_reg' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:110]
+INFO: [Synth 8-4471] merging register 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/pVde_2_reg' into 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/pVde_2_reg' [E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd:150]
+WARNING: [Synth 8-3917] design top_hdmi_test has port HDMI_OEN[0] driven by constant 1
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/pDataOut_1_reg[2]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/pDataOut_1_reg[1]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/n1d_1_reg[3]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/pDataOut_1_reg[0]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pDataOut_1_reg[1]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/n1d_1_reg[3]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pDataOut_1_reg[0]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/pDataOut_1_reg[2]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/pDataOut_1_reg[1]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1d_1_reg[3]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/pDataOut_1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/pDataOut_1_reg[0]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_1_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_1_reg )
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/q_m_2_reg[0]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/q_m_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/q_m_2_reg[0]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/q_m_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/q_m_2_reg[0]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_2_reg'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_2_reg' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_1_reg'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/q_m_2_reg[2]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/q_m_2_reg[2]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_1_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/pC0_1_reg )
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]' (FD) to 'hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\hdmi_top_inst/rgb2dvi_inst/DataEncoders[2].DataEncoder/n1q_m_2_reg[3] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 995.523 ; gain = 369.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz_0_inst/video_clk' to pin 'clk_wiz_0_inst/bbstub_video_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz_0_inst/video_clk_5x' to pin 'clk_wiz_0_inst/bbstub_video_clk_5x/O'
+WARNING: [Synth 8-565] redefining clock 'sys_clk'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 995.523 ; gain = 369.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 995.523 ; gain = 369.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 997.348 ; gain = 370.945
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[13]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \img_data_generator_inst/bram_hdmi_data_inst  has unconnected pin dina[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module clk_wiz_0_inst has unconnected pin reset
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1002.133 ; gain = 375.730
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1002.133 ; gain = 375.730
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1002.133 ; gain = 375.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1002.133 ; gain = 375.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1002.133 ; gain = 375.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1002.133 ; gain = 375.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |clk_wiz_0      |         1|
+|2     |bram_hdmi_data |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |bram_hdmi_data |     1|
+|2     |clk_wiz_0      |     1|
+|3     |CARRY4         |    19|
+|4     |LUT1           |    19|
+|5     |LUT2           |    19|
+|6     |LUT3           |    47|
+|7     |LUT4           |    24|
+|8     |LUT5           |    55|
+|9     |LUT6           |    89|
+|10    |MUXF7          |     4|
+|11    |OSERDESE2      |     4|
+|12    |OSERDESE2_1    |     4|
+|13    |FDCE           |    73|
+|14    |FDPE           |     2|
+|15    |FDRE           |    92|
+|16    |FDSE           |    15|
+|17    |IBUF           |     1|
+|18    |OBUF           |     1|
+|19    |OBUFDS         |     4|
++------+---------------+------+
+
+Report Instance Areas: 
++------+---------------------------------------+-------------------+------+
+|      |Instance                               |Module             |Cells |
++------+---------------------------------------+-------------------+------+
+|1     |top                                    |                   |   491|
+|2     |  hdmi_top_inst                        |hdmi_top           |   328|
+|3     |    datain_2_rgb_inst                  |datain_2_rgb       |    78|
+|4     |    rgb2dvi_inst                       |rgb2dvi            |   250|
+|5     |      ClockSerializer                  |OutputSERDES       |     3|
+|6     |      \DataEncoders[0].DataEncoder     |TMDS_Encoder       |    83|
+|7     |      \DataEncoders[0].DataSerializer  |OutputSERDES_0     |     3|
+|8     |      \DataEncoders[1].DataEncoder     |TMDS_Encoder_1     |    82|
+|9     |      \DataEncoders[1].DataSerializer  |OutputSERDES_2     |     3|
+|10    |      \DataEncoders[2].DataEncoder     |TMDS_Encoder_3     |    70|
+|11    |      \DataEncoders[2].DataSerializer  |OutputSERDES_4     |     3|
+|12    |      LockLostReset                    |ResetBridge        |     3|
+|13    |        SyncAsyncx                     |SyncAsync          |     2|
+|14    |  img_data_generator_inst              |img_data_generator |   158|
++------+---------------------------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1002.133 ; gain = 375.730
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 17 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1002.133 ; gain = 232.477
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1002.133 ; gain = 375.730
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1018.207 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+79 Infos, 16 Warnings, 17 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1018.207 ; gain = 631.461
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1018.207 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/eth_ddr3_hdmi/eth_ddr3_hdmi.runs/synth_1/top_hdmi_test.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_hdmi_test_utilization_synth.rpt -pb top_hdmi_test_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 12 10:06:03 2023...
