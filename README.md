@@ -47,9 +47,17 @@ module img_data_generator
 
 （2）数据有效信号video_active为h_active和v_active的逻辑与，data_req等效于video_active
 
-在黄线处，数据首次有效，将波形图放大得到第二张图，其中data_img是在data_req后一拍有效的，其数据的正确性可以自行进行检验：
+在黄线处，数据首次有效，将波形图放大得到第二张图，其中data_img是在data_req后一拍有效的，其数据的正确性可以自行进行检验，在工程的cy_files文件夹中，存放着图像数据与相关处理代码：
 
+（1）origin_img：为1366 * 768 的JPG原图像；
 
+（2）384x216_img_bin_file：原图像通过Img2Lcd.exe软件生成的384x216大小的RGB565的bin文件；
+
+（3）bin_2_bram.py：将bin文件转化为BRAM初始化的coe文件；
+
+（4）384x216_img_bram_init_file：BRAM IP核的初始化文件；
+
+## 2. hdmi_top——HDMI接口顶层模块
 
 
 
