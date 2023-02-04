@@ -30,7 +30,7 @@ module hdmi_top(
     output [2:0]    TMDS_data_n,      //HDMI differential data negative
     output [2:0]    TMDS_data_p,      //HDMI differential data positive
     
-    input           data_req,         //data_in慢data_req一拍 
+    output           data_req,         //data_in慢data_req一拍 
     input  [15:0]   data_in           //RGB565 data
 );
 
