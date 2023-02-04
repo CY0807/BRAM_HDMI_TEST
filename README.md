@@ -1,5 +1,12 @@
 # BRAM_HDMI_TEST
+
 将数据从FPGA的BRAM输出到HDMI接口的测试例程
+
+芯片型号：xc7a35tfgg484-2L
+
+开发板：ALINX AX7035
+
+开发环境：vivado 2019.1
 
 在顶层模块top_hdmi_test下主要包含了两个模块，分别是负责生成图像数据的img_data_generator和hdmi接口的顶层模块hdmi_top，工作机制很简单：即hdmi_top根据行场同步信号的时序发出数据请求，img_data_generator接受到请求信号后在下一个时钟周期将存储在BRAM中的下一个图像像素数据发送给hdmi接口，实现显示功能。
 
@@ -59,5 +66,34 @@ module img_data_generator
 
 ## 2. hdmi_top——HDMI接口顶层模块
 
+模块头代码如下：
+````
+module hdmi_top(
+    input           video_clk,        //pixel clock and 5x pixel clock required for the video
+    input           video_clk_5x,
+    input           HDMI_reset_n,
+    
+    output [0:0]    HDMI_OEN,         //HDMI out enable
+    output          TMDS_clk_n,       //HDMI differential clock negative
+    output          TMDS_clk_p,       //HDMI differential clock positive
+    output [2:0]    TMDS_data_n,      //HDMI differential data negative
+    output [2:0]    TMDS_data_p,      //HDMI differential data positive
+    
+    output          data_req,         //data_in慢data_req一拍 
+    input  [15:0]   data_in           //RGB565 data
+);
+````
+（1）video_clk、video_clk_5x按照HDMI 1080P的时序标准分别为148.5MHz、742.5MHz，来源于vivado生成的锁相环IP核；
 
+（2）HDMI_reset_n是物理按键reset信号和锁相环locked信号的逻辑与；
+
+（3）HDMI_OEN、TMDS信号是输出到HDMI物理接口上的信号；
+
+（4）data_req、data_in与数据生成模型进行通信；data_req为请求数据信号，data_in在data_req有效的下一个时钟周期有效，为RGB565数据；
+
+hdmi_top内部的模块则满足了hdmi 1080P的时序输出要求，其形式固定且开源资料较多，在此不进行介绍了。
+
+在屏幕上的显示效果如下图。
+
+![0ce0580d737b55cafccd7ccccc6d0c05f290](https://user-images.githubusercontent.com/95362898/216745313-dbd86f3d-c9fa-4da3-bbf6-609958ec322d.jpg)
 
