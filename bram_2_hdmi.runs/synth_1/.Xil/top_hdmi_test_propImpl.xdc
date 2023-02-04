@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/constrs_1/imports/new/top.xdc rfile:../../../eth_ddr3_hdmi.srcs/constrs_1/imports/new/top.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/constrs_1/imports/new/top.xdc rfile:../../../bram_2_hdmi.srcs/constrs_1/imports/new/top.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y18 [get_ports sys_clk]
 set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]

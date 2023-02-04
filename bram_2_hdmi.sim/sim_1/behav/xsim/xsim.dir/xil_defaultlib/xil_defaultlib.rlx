@@ -1,0 +1,8 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sim_1/new/tb_img_data_generator.v,1673406807,verilog,,,,tb_img_data_generator,,,../../../../bram_2_hdmi.srcs/sources_1/ip/clk_wiz_0,,,,,
+E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/ip/bram_hdmi_data/sim/bram_hdmi_data.v,1673488838,verilog,,E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/new/img_data_generator.v,,bram_hdmi_data,,,../../../../bram_2_hdmi.srcs/sources_1/ip/clk_wiz_0,,,,,
+E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/new/img_data_generator.v,1673440551,verilog,,E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sim_1/new/tb_img_data_generator.v,,img_data_generator,,,../../../../bram_2_hdmi.srcs/sources_1/ip/clk_wiz_0,,,,,

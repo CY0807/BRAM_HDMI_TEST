@@ -2,11 +2,11 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Jan 11 11:18:38 2023
-# Process ID: 28188
-# Current directory: E:/eth_ddr3_hdmi/eth_ddr3_hdmi.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source E:/eth_ddr3_hdmi/eth_ddr3_hdmi.sim/sim_1/behav/xsim/xsim.dir/tb_img_data_generator_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: E:/eth_ddr3_hdmi/eth_ddr3_hdmi.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: E:/eth_ddr3_hdmi/eth_ddr3_hdmi.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Sat Feb  4 11:01:22 2023
+# Process ID: 18268
+# Current directory: E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.sim/sim_1/behav/xsim/xsim.dir/tb_img_data_generator_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source E:/eth_ddr3_hdmi/eth_ddr3_hdmi.sim/sim_1/behav/xsim/xsim.dir/tb_img_data_generator_behav/webtalk/xsim_webtalk.tcl -notrace
+source E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.sim/sim_1/behav/xsim/xsim.dir/tb_img_data_generator_behav/webtalk/xsim_webtalk.tcl -notrace

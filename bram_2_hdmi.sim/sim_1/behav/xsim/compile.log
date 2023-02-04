@@ -1,6 +1,8 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/bram_hdmi_data/sim/bram_hdmi_data.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/ip/bram_hdmi_data/sim/bram_hdmi_data.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module bram_hdmi_data
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/new/img_data_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/new/img_data_generator.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module img_data_generator
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sim_1/new/tb_img_data_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sim_1/new/tb_img_data_generator.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_img_data_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
