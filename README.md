@@ -1,2 +1,9 @@
 # BRAM_HDMI_TEST
 将数据从FPGA的BRAM输出到HDMI接口的测试例程
+
+在顶层模块top_hdmi_test下主要包含了两个模块，分别是负责生成图像数据的img_data_generator和hdmi接口的顶层模块hdmi_top，工作机制很简单：即hdmi_top根据行场同步信号的时序发出数据请求，img_data_generator接受到请求信号后在下一个时钟周期将存储在BRAM中的下一个图像像素数据发送给hdmi接口，实现显示功能。
+
+接下来将对img_data_generator和hdmi_top这两个模块的接口和主要内容进行分析：
+
+## img_data_generator——数据生成模块
+
