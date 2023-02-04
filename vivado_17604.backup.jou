@@ -2,16 +2,27 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Feb  4 16:58:12 2023
-# Process ID: 6936
+# Start of session at: Fri Feb  3 23:32:25 2023
+# Process ID: 17604
 # Current directory: E:/github_repo/BRAM_HDMI_TEST
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10324 E:\github_repo\BRAM_HDMI_TEST\bram_2_hdmi.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17572 E:\github_repo\BRAM_HDMI_TEST\bram_2_hdmi.xpr
 # Log file: E:/github_repo/BRAM_HDMI_TEST/vivado.log
 # Journal file: E:/github_repo/BRAM_HDMI_TEST\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+source tb_img_data_generator.tcl
+run 40 us
+run 40 us
+run 40 us
+run 40 us
+run 400 us
+run 400 us
+run 400 us
+run 1200 us
+close_sim
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
