@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Feb  4 11:09:42 2023
+| Date         : Thu Jan 12 10:07:54 2023
 | Host         : LAPTOP-8KA88UT5 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_hdmi_test_methodology_drc_routed.rpt -pb top_hdmi_test_methodology_drc_routed.pb -rpx top_hdmi_test_methodology_drc_routed.rpx
 | Design       : top_hdmi_test
@@ -47,15 +47,15 @@ Related violations: <none>
 XDCC-1#1 Warning
 Scoped Clock constraint overwritten with the same name  
 A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
-New: create_clock -period 20.000 [get_ports sys_clk] (Source: E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/constrs_1/imports/new/top.xdc (Line: 10))
-Previous: create_clock -period 20.000 [get_ports sys_clk] (Source: e:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc (Line: 56))
+New: create_clock -period 20.000 [get_ports sys_clk] (Source: E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/constrs_1/imports/new/top.xdc (Line: 10))
+Previous: create_clock -period 20.000 [get_ports sys_clk] (Source: e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc (Line: 56))
 Related violations: <none>
 
 XDCC-7#1 Warning
 Scoped Clock constraint overwritten on the same source  
 A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
-New: create_clock -period 20.000 [get_ports sys_clk] (Source: E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/constrs_1/imports/new/top.xdc (Line: 10))
-Previous: create_clock -period 20.000 [get_ports sys_clk] (Source: e:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc (Line: 56))
+New: create_clock -period 20.000 [get_ports sys_clk] (Source: E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/constrs_1/imports/new/top.xdc (Line: 10))
+Previous: create_clock -period 20.000 [get_ports sys_clk] (Source: e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc (Line: 56))
 Related violations: <none>
 
 

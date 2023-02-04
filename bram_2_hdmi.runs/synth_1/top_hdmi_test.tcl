@@ -17,43 +17,45 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tfgg484-2L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.cache/wt [current_project]
-set_property parent.project_path E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.xpr [current_project]
+set_property webtalk.parent_dir E:/eth_ddr3_hdmi/eth_ddr3_hdmi.cache/wt [current_project]
+set_property parent.project_path E:/eth_ddr3_hdmi/eth_ddr3_hdmi.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo e:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.cache/ip [current_project]
+set_property ip_output_repo e:/eth_ddr3_hdmi/eth_ddr3_hdmi.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/imports/384x216_img_bram_init_file/1.coe
+add_files E:/eth_ddr3_hdmi/cy_files/hdmi_test/384x216_img_bram_init_file/1.coe
 read_verilog -library xil_defaultlib {
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/hdmi/hdmi_define.v
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/hdmi/datain_2_rgb.v
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/hdmi/hdmi_top.v
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/new/img_data_generator.v
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/new/top_hdmi_test.v
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/hdmi_define.v
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/datain_2_rgb.v
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/hdmi_top.v
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/new/img_data_generator.v
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/new/top_hdmi_test.v
 }
 read_vhdl -library xil_defaultlib {
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/hdmi/RGB2dvi/SyncAsync.vhd
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/hdmi/RGB2dvi/SyncAsyncReset.vhd
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/hdmi/RGB2dvi/ClockGen.vhd
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/hdmi/RGB2dvi/DVI_Constants.vhd
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/hdmi/RGB2dvi/OutputSERDES.vhd
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd
-  E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/hdmi/RGB2dvi/rgb2dvi.vhd
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/SyncAsync.vhd
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/SyncAsyncReset.vhd
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/ClockGen.vhd
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/DVI_Constants.vhd
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/OutputSERDES.vhd
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/TMDS_Encoder.vhd
+  E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/hdmi/RGB2dvi/rgb2dvi.vhd
 }
-read_ip -quiet E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all e:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all e:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all e:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/ip/bram_hdmi_data/bram_hdmi_data.xci
-set_property used_in_implementation false [get_files -all e:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/sources_1/ip/bram_hdmi_data/bram_hdmi_data_ooc.xdc]
+read_ip -quiet E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/bram_hdmi_data/bram_hdmi_data.xci
+set_property used_in_implementation false [get_files -all e:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/sources_1/ip/bram_hdmi_data/bram_hdmi_data_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -63,8 +65,8 @@ set_property used_in_implementation false [get_files -all e:/github_repo/BRAM_HD
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/constrs_1/imports/new/top.xdc
-set_property used_in_implementation false [get_files E:/github_repo/BRAM_HDMI_TEST/bram_2_hdmi.srcs/constrs_1/imports/new/top.xdc]
+read_xdc E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/constrs_1/imports/new/top.xdc
+set_property used_in_implementation false [get_files E:/eth_ddr3_hdmi/eth_ddr3_hdmi.srcs/constrs_1/imports/new/top.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
