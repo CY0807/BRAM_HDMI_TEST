@@ -1,6 +1,6 @@
 # BRAM_HDMI_TEST
 
-将数据从FPGA的BRAM输出到HDMI接口的测试例程
+将数据从FPGA的BRAM输出到HDMI接口的测试例程，本项目为一个Vivado工程，通过bram_2_hdmi.xpr文件可以直接在Vivado中打开
 
 芯片型号：xc7a35tfgg484-2L
 
